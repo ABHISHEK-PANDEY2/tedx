@@ -1,3 +1,8 @@
+@font-face {
+  font-family: poppines;
+  src: url(./static/Poppins-Regular.ttf);
+}
+
 body {
   text-align: center;
   background-color: #0e061d;
