@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
 body {
-  text-align: center;
+  margin: 0;
+  text-align: left;
   background-color: #0e061d;
 }
