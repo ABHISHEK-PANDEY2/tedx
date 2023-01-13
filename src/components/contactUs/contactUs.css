@@ -25,7 +25,7 @@ body {
 .cover2 {
   margin-top: -380px;
   min-width: 250px;
-  width: auto;
+  width: 1200px;
   padding: 100px;
   /* border: solid 2px #ffffff; */
   /* width: 269px;
@@ -70,7 +70,7 @@ body {
   font-family: "poppins";
   font-style: normal;
   font-weight: 700;
-  font-size: 8.6vmin;
+  font-size: 9.6vmin;
   line-height: 160%;
   /* identical to box height, or 154px */
 
@@ -85,8 +85,7 @@ body {
   padding-top: 50px;
 }
 .right {
-  margin-right: -10px;
-  margin-left: 40px;
+  margin: auto;
 }
 
 .icon {
@@ -102,11 +101,6 @@ input {
   border-width: 0 0 2px;
   border-color: #ffffff;
 
-  width: 68vmin;
-  height: 45px;
-  left: 751px;
-  top: 7739px;
-
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
@@ -114,7 +108,7 @@ input {
   line-height: 160%;
   /* identical to box height, or 45px */
 
-  display: flex;
+  display: inline-block;
   align-items: center;
   letter-spacing: 0.02em;
 
@@ -136,22 +130,20 @@ input {
 .left {
   width: 35%;
 }
-
-.button {
-  float: right;
-  text-decoration: none;
+.form {
+  text-align: right;
 }
 
 .button {
-  position: absolute;
+  position: static;
   transition-duration: 0.4s;
   background-color: #0e061d;
   color: #ffffff;
   border: 2px solid #ffffff;
-  padding: 12px 43px;
+  padding: 1.2vmin 4vmin;
   border-radius: 4px;
   font-size: 2.2vmin;
-  margin-left: 51.4vmin;
+  margin-left: auto;
 }
 
 .button:hover {
