@@ -15,7 +15,7 @@
   color: #ffffff;
   display: flex;
   height: 140vh;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
