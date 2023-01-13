@@ -4,6 +4,14 @@
 }
 
 body {
-  text-align: center;
+  margin: 0;
   background-color: #0e061d;
+}
+
+body::-webkit-scrollbar{
+   width: 0;
+}
+
+h2, p {
+  margin: 0;
 }
