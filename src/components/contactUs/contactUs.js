@@ -59,11 +59,11 @@ const ContactUs = () => {
               </div>
               <div className="form-group">
                 <input placeholder="Query*" type="text" required />
-              </div>
+              </div>{" "}
+              <button className="button form-group" type="submit">
+                Submit
+              </button>
             </form>
-            <button className="button" type="submit">
-              Submit
-            </button>
           </div>
         </div>
       </div>

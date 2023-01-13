@@ -5,6 +5,7 @@ import Faq from "./components/faq/faq";
 import Navbar from "./components/navbar";
 import Registration from "./components/registration/Registration";
 import ContactUs from "./components/contactUs/contactUs";
+import Footer from "./components/footer/footer";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Faq />
       <ContactUs />
+      <Footer />
     </div>
   );
 }
