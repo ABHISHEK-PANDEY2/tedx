@@ -1,10 +1,12 @@
 import banner from "../images/banner.jpg";
 import mouse from "../images/mouse.svg"
+import x from "../images/x.svg"
 import { useEffect } from "react";
 const Banner = () => {
     const styles = {
         wrapper : {
             height: "calc(100vh - 160px)",
+            minHeight: "600px",
             width: "100%",
             display: "flex",
             flexDirection: "column",
@@ -12,8 +14,19 @@ const Banner = () => {
             alignItems : "center"
         },
         banner:{
-            height : "165px",
+            boxSizing : "border-box",
+            padding:"0px 50px",
+            position:"relative",
+            height : "20vmin",
             width : "100%",
+            background:`url(${banner})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            display:"flex",
+            justifyContent:"space-between",
+            alignItems:"center",
+            fontFamily: "'Poppins', sans-serif",
+            fontWeight:"800"
         },
         date:{
             maxWidth : "770px",
@@ -31,6 +44,8 @@ const Banner = () => {
         },
         register:{
             position:"relative",
+            border:"none",
+            outline:"none",
             width:"40%",
             height:"100%",
             color:"#F9363A",
@@ -55,12 +70,25 @@ const Banner = () => {
             height: "0",
             borderBottom: "30px solid transparent",
             borderTop: "30px solid transparent",
-            borderRight: "30px solid #0e061d"
+            borderRight: "30px solid #0e061d",
+            outlineRight:"1px solid #0e061d"
+        },
+        x:{
+            height:"55vmin",
+            width:"30vmax",
+            position :"absolute",
+            top:"50%",
+            left:"50%",
+            transform:"translate(-50%,-50%)"
         }
     }
     return ( 
     <div style={styles.wrapper}>
-        <img src={banner} style={styles.banner} alt=""/>
+        <div style={styles.banner}>
+            <img src={x} style={styles.x} alt="" />
+            <span style={{fontSize : "4vmax" ,color:"#ff898b", opacity:"0.7"}}>JSSATE, NOIDA</span>
+            <span style={{fontSize : "4vmax", color:"#F9363A", opacity:"0.7"}}>PRESENTS TEDX</span>
+        </div>
         <div style={styles.date}>
             <div style={styles.register}>
                 <span style={styles.text}>Register Here</span>
