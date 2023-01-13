@@ -1,13 +1,12 @@
 import "./App.css";
 import Banner from "./components/banner";
 import Faq from "./components/faq";
-import Navbar from "./components/navbar";
+import Registration from "./components/registration/Registration";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Banner/>
-      {/* <Faq /> */}
+      <Registration/>
+      <Faq />
     </div>
   );
 }

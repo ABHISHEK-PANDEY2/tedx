@@ -1,4 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@font-face {
+  font-family: poppines;
+  src: url(./static/Poppins-Regular.ttf);
+}
+
 body {
   margin: 0;
   text-align: left;
