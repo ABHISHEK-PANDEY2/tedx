@@ -7,7 +7,7 @@ const Carousel = () => {
         },
         p:{
             color:"#ffffff",
-            fontFamily: "'Poppins',sans-serif",
+            fontFamily: "'Lato','Poppins',sans-serif",
             margin:"0",
             fontSize:"1.8rem",
             opacity:"0.7",

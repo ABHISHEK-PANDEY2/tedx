@@ -17,13 +17,17 @@ const Navbar = () => {
         links : {
             display : "flex",
             gap : "5vw",
-            fontFamily: "'Poppins', sans-serif",
+            fontFamily: "'Lato','Poppins', sans-serif",
             listStyleType:"none",
             color:"white",
             fontSize:"1.1rem"
         },
         linkItem: {
             cursor:"pointer"
+        },
+        a:{
+          textDecoration:'none',
+          color:'white'
         }
     }
 
@@ -67,7 +71,7 @@ const Navbar = () => {
                 (width > 1000 )?(
                 <ul className="links" style={styles.links}>
                     {
-                        links.map((link,i) => <li style={styles.linkItem} key={i}>{link.item}</li>)
+                        links.map((link,i) => <li style={styles.linkItem} key={i}><a style={styles.a} href={link.link}>{link.item}</a></li>)
                     }
                 </ul>
                 ):(
