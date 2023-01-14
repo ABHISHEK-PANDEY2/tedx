@@ -1,11 +1,20 @@
 @font-face {
-  font-family: poppines;
-  src: url(./static/Poppins-Regular.ttf);
+  font-family: lato;
+  src: url(./static/Lato-Regular.ttf);
 }
+
+@font-face {
+  font-family: latoBold;
+  src: url(./static/Lato-Bold.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
 
 body {
   margin: 0;
+  text-align: left;
   background-color: #0e061d;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar{
@@ -14,4 +23,8 @@ body::-webkit-scrollbar{
 
 h2, p {
   margin: 0;
+}
+
+.App{
+  scroll-behavior: smooth;
 }

@@ -1,8 +1,3 @@
-body {
-  text-align: left;
-  background-color: #0e061d;
-}
-
 .faqs {
   color: #f9363a;
   margin-bottom: 0px;
@@ -20,7 +15,7 @@ body {
   color: #ffffff;
   display: flex;
   height: 140vh;
-  width: 100vw;
+  width: 100%;
   justify-content: center;
   align-items: center;
 }
