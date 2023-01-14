@@ -8,8 +8,7 @@ const Navbar = () => {
             display:"flex",
             justifyContent:"space-between",
             alignItems:"center",
-            padding: "40px 50px 60px 50px",
-            position:"absolute"
+            padding: "40px 50px 60px 50px"
         },
         logo : {
             height:"60px",
@@ -31,7 +30,7 @@ const Navbar = () => {
     const links = [
         {
             item : "Regestration",
-            link:""
+            link:"/reg"
         },
         {
             item : "Speakers",

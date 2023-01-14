@@ -19,21 +19,21 @@ const Registration = () => {
   const [collegeError, setCollegeError] = useState('white');
 
   const moveDown = () => {
-    console.log("MoveDown");
+    // console.log("MoveDown");
     document.querySelectorAll('section').forEach((s) => {
-      console.log("MoveDown");
+      // console.log("MoveDown");
       if(parseFloat(s.style.bottom)<400){
-      console.log(s.style.bottom);
+      // console.log(s.style.bottom);
       s.style.bottom = parseFloat(s.style.bottom) + 100 + '%';
       }     
     });
   }
 
   const moveUp = () => {
-    console.log("MoveUp");
+    // console.log("MoveUp");
     document.querySelectorAll('section').forEach((s) => {
       if(parseFloat(s.style.bottom)>0){
-      console.log(s.style.bottom);
+      // console.log(s.style.bottom);
       s.style.bottom = parseFloat(s.style.bottom) - 100 + '%';
       }
      });
@@ -77,19 +77,19 @@ const Registration = () => {
   }
 
   useEffect(() => {
-    console.log(name);
+    // console.log(name);
   }, [name]);
 
 
   useEffect(() => {
     document.querySelectorAll('section').forEach((s) => {
-      console.log(s.style.bottom);
+      // console.log(s.style.bottom);
       s.style.bottom = '0%';
      });
 
     document.addEventListener('keypress', (e) => {
       if(e.key === 'Enter'){
-        console.log('Enter', e.target.name === 'name');
+        // console.log('Enter', e.target.name === 'name');
         e.target.value ? moveDown() : error(e.target.name)
       }
     });

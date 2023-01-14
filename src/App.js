@@ -1,24 +1,32 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Banner from "./components/banner";
-import Faq from "./components/faq";
-import Registration from "./components/registration/Registration";
-import PageNotFound from "./components/PageNotFound";
+import About from "./components/about/about";
+import Faq from "./components/faq/faq";
 import Navbar from "./components/navbar";
-
-
+import Registration from "./components/registration/Registration";
+import ContactUs from "./components/contactUs/contactUs";
+import Footer from "./components/footer/footer";
+import Timeline from "./components/timeline/timeline";
+import PageNotFound from "./components/PageNotFound";
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/> */}
       <Routes>
-        <Route path="registration" element={<Registration/>}/>
-        <Route path="/" element={<>
-        <Banner/>
-        <Faq />
-         </>}
-        />
-        <Route path='*' element={<PageNotFound/>}/>
+        <Route 
+        path="/" 
+        element={
+        <>
+      <Navbar />
+      <Banner />
+      <Timeline />
+      <About />
+      <Faq />
+      <ContactUs />
+      <Footer />
+        </>}/>
+      <Route path="reg" element={<Registration />}/>
+      <Route path="*" element={<PageNotFound/>}/>
       </Routes>
     </div>
   );

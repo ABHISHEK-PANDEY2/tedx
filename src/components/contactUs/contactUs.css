@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.cover {
+  /* display: flex;
+  color: #ffffff;
+  
+  width: 100%;
+  padding: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+  position: relative;
+  margin-top: -30px; */
+  /* border: solid 2px #ffffff; */
+  color: #ffffff;
+  display: flex;
+  margin-top: 280px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover2 {
+  margin-top: -380px;
+  min-width: 250px;
+  width: 1200px;
+  padding: 100px;
+  /* border: solid 2px #ffffff; */
+  /* width: 269px;
+  padding: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -700px; */
+  display: flex;
+  flex-flow: column wrap;
+  flex-direction: column;
+}
+
+.contactUs {
+  width: 198px;
+  height: 51px;
+  left: 197px;
+  top: 5685px;
+  margin-bottom: -8vmin;
+
+  font-family: "poppins";
+  font-style: normal;
+
+  font-size: 3.2vmin;
+  line-height: 160%;
+  /* or 51px */
+
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+
+  opacity: 0.75;
+}
+
+.still {
+  width: 87.7vmin;
+  height: 154px;
+  left: 197px;
+  top: 5710px;
+  margin-bottom: -2vmin;
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 9.6vmin;
+  line-height: 160%;
+  /* identical to box height, or 154px */
+
+  color: #f9363a;
+}
+
+.cover3 {
+  display: flex;
+}
+.left {
+  font-size: 2.6vmin;
+  padding-top: 50px;
+}
+.right {
+  margin: auto;
+}
+
+.icon {
+  width: 3.3vmin;
+  height: 3.3vmin;
+  margin-right: 2vmin;
+}
+
+input {
+  color: #ffffff;
+  background-color: transparent;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #ffffff;
+
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.4vmin;
+  line-height: 160%;
+  /* identical to box height, or 45px */
+
+  display: inline-block;
+  align-items: center;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+
+  opacity: 0.75;
+}
+
+.form-group {
+  padding: 20px;
+}
+.child {
+  width: 50%;
+  height: 100px;
+
+  text-align: left;
+  box-sizing: border-box;
+}
+.left {
+  width: 35%;
+}
+.form {
+  text-align: right;
+}
+
+.button {
+  position: static;
+  transition-duration: 0.4s;
+  background-color: #0e061d;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 1.2vmin 4vmin;
+  border-radius: 4px;
+  font-size: 2.2vmin;
+  margin-left: auto;
+}
+
+.button:hover {
+  background-color: #0e061d; /* Green */
+  color: #f9363a;
+  border: 2px solid #f9363a;
+}
