@@ -1,0 +1,172 @@
+   .timeline_body{
+    max-width: 1170px;
+    margin: auto;
+   }
+   .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 95%;
+    margin: 0 auto;
+   }
+   .sub_title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    opacity: 0.75;
+    font-family: "poppines";
+    margin: 0;
+    margin-bottom: -2rem;
+   }
+   
+   
+   .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 160%;
+    display: flex;
+    align-items: center;
+    color: #F9363A;
+    font-family: "poppines";
+    margin: 0;
+    
+  }
+  h3.vertical-timeline-element-title{
+    font-weight: 400;
+  font-size: 2rem;
+  line-height: 29px;
+  color: #ffffff;
+  font-family: "poppines";
+  }
+
+  .vertical-timeline-element-content-arrow {
+    display: none;
+  }
+  span.date.vertical-timeline-element-date{
+    color: #ffffff
+  }
+  .vertical-timeline{
+    /* width: 100% !important; */
+  }
+  .vertical-timeline-element-content {
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
+      0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+  }
+  .vertical-timeline-element-content.bounce-in{
+    background-color: #202020;
+    min-height: 86px;
+  left: 0px;
+  top: 0px;
+  border-radius: 4.813411712646484px;
+  box-shadow: 0px 3.61006px 0px #DDDDDD;
+  border-bottom: 3px solid white;
+  
+  }
+
+  .date{
+    color: #ffffff !important;
+    font-family: "poppines";
+  }
+  
+  
+  #description {
+    color: #ffffff;
+    font-family: "poppines";
+  }
+  .span.vertical-timeline-element-icon.bounce-in{
+    background: #202020 !important;
+  }
+
+  
+  @media only screen and (max-width: 1700px) {
+    .vertical-timeline-element-date {
+      display: block !important;
+      float: none !important;
+      color: rgb(44, 44, 44);
+      margin-top: 1.5em;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+  .date {
+          top: -15px !important;
+          color: #ffffff !important;
+      margin: 20px !important;
+      font-size: 1.5rem !important;
+      font-family: "poppines" !important;
+  }
+  
+  }
+
+  
+  
+  @media only screen and (min-width: 992px){
+  
+    .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content {
+      float: right !important;
+    }
+    
+  }
+
+  
+  @media only screen and (min-width: 992px){
+  
+    .vertical-timeline--two-columns .vertical-timeline-element-icon {
+      width: 60px !important;
+      height: 60px !important;
+      left: 50% !important;
+      margin-left: -30px !important;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 992px){
+  
+    .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date {
+      left: auto !important;
+      right: 124% !important;
+      text-align: right !important;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 992px){
+  
+    .vertical-timeline.vertical-timeline--two-columns:before {
+      left: 50% !important;
+      margin-left: -2px !important;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 992px){
+  
+    .vertical-timeline--two-columns .vertical-timeline-element-content {
+      margin-left: 0 !important;
+      padding: 1.5em !important;
+      width: 44% !important;
+    }
+  }
+  
+  
+  @media only screen and (min-width: 992px){
+  
+    .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
+      position: absolute !important;
+      width: 100% !important;
+      left: 124% !important;
+    }
+  }
+
+
+  @media only screen and (min-width: 1170px){
+
+    .vertical-timeline.vertical-timeline--two-columns {
+      width: 95% !important;
+    }
+  }
