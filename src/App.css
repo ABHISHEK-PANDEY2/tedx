@@ -5,8 +5,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
+*{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   text-align: left;
   background-color: #0e061d;
+  font-family:"'Poppins', sans-serif",;
+}
+
+h1,h2 {
+  margin:0;
+  font-size: 4.5rem;
+  font-family:'Poppins', sans-serif;
+  color:#F9363A;
+}
+
+#speakers{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#speakers::-webkit-scrollbar {
+  display: none;
 }

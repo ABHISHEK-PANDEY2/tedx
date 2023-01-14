@@ -1,5 +1,6 @@
 import "./App.css";
 import Banner from "./components/banner";
+import Carousel from "./components/carousel";
 import Faq from "./components/faq";
 import Navbar from "./components/navbar";
 import Registration from "./components/registration/Registration";
@@ -8,8 +9,9 @@ function App() {
     <div className="App">
       <Navbar/>
       <Banner/>
-      <Registration/>
-      <Faq />
+      <Carousel/>
+      {/* <Registration/> */}
+      {/* <Faq /> */}
     </div>
   );
 }
