@@ -10,14 +10,14 @@ import Navbar from "./components/navbar";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/> */}
       <Routes>
         <Route path="registration" element={<Registration/>}/>
         <Route path="/" element={<>
-        <Faq />
         <Banner/>
         <Faq />
-      </>}/>
+         </>}
+        />
         <Route path='*' element={<PageNotFound/>}/>
       </Routes>
     </div>
