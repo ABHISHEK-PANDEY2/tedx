@@ -9,6 +9,7 @@ import ContactUs from "./components/contactUs/contactUs";
 import Footer from "./components/footer/footer";
 import Timeline from "./components/timeline/timeline";
 import PageNotFound from "./components/PageNotFound";
+import Galary from "./components/galary/Galary";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
         <>
       <Navbar />
       <Banner />
+      <Galary/>
       <Timeline />
       <About />
       <Faq />
