@@ -109,6 +109,26 @@ span{
     cursor: pointer;
 }
 
+.errorMessage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b21313;
+    font-size: 0.95rem;
+    background-color: #fab1c842;
+    border-radius: 3px;
+    padding: 8px 12px;
+    margin: 5px 0px;
+    box-sizing: border-box;
+}
+
+.errorMessage>svg{
+    display: flex;
+    width: 1rem;
+    height: 1rem;
+    padding-right: 5px;
+}
+
 @media screen and (max-width:1200px) and (min-width:993px) {
     .p{
         font-size: 1.5rem;
