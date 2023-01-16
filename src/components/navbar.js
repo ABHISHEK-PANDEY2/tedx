@@ -8,7 +8,13 @@ const Navbar = () => {
             display:"flex",
             justifyContent:"space-between",
             alignItems:"center",
-            padding: "40px 50px 60px 50px"
+            padding: "30px 50px 30px 50px",
+            position:"fixed",
+            left: 0,
+            right: 0,
+            top: 0,
+            backgroundColor:"#0e061d",
+            zIndex:"10"
         },
         logo : {
             height:"60px",
