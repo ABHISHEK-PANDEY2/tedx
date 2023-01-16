@@ -4,9 +4,12 @@ import CheckIcon from '@mui/icons-material/Check';
 import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
 import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownRounded';
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
+import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
+import { useNavigate } from 'react-router-dom';
 
 const Registration = () => {
 
+  const navigate = useNavigate(); 
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const [email, setEmail] = useState('');
@@ -17,87 +20,120 @@ const Registration = () => {
   const [numberError, setNumberError] = useState('white');
   const [emailError, setEmailError] = useState('white');
   const [collegeError, setCollegeError] = useState('white');
+  const [foc, setFoc] = useState(0);
+  const [errorText, setErrorText] = useState(null);
 
   const moveDown = () => {
-    // console.log("MoveDown");
-    document.querySelectorAll('section').forEach((s) => {
-      // console.log("MoveDown");
-      if(parseFloat(s.style.bottom)<400){
-      // console.log(s.style.bottom);
-      s.style.bottom = parseFloat(s.style.bottom) + 100 + '%';
-      }     
-    });
+    if(foc < 4){
+      setFoc(f => f+1);
+    }
   }
 
   const moveUp = () => {
-    // console.log("MoveUp");
-    document.querySelectorAll('section').forEach((s) => {
-      if(parseFloat(s.style.bottom)>0){
-      // console.log(s.style.bottom);
-      s.style.bottom = parseFloat(s.style.bottom) - 100 + '%';
-      }
-     });
+    if(foc > 0){
+      setFoc(f => f-1);
+    }
   }
 
   
-  const error = (err) => {
+  const error = (err, mess) => {
     if(err === 'name'){
       setNameError('red');
+      setErrorText(mess);
     }
     if(err === 'number'){
       setNumberError('red');
+      setErrorText(mess);
     }
     if(err === 'email'){
       setEmailError('red');
+      setErrorText(mess);
     }
     if(err === 'college'){
       setCollegeError('red');
+      setErrorText(mess);
     }
     if(err === 'sem'){
       setSemError('red');
+      setErrorText(mess);
     }
   } 
 
-  const handleOK = (e) => {
+  const handleOK = (e, val) => {
     if(e === 'name'){
-      name.trim() ? moveDown() : error('name')
-    }
-    if(e === 'number'){
-      number.trim() ? moveDown() : error('number')
-    }
-    if(e === 'email'){
-      email.trim() ? moveDown() : error('email')
-    }
-    if(e === 'college'){
-      college.trim() ? moveDown() : error('college')
-    }
-    if(e === 'sem'){
-      sem.trim() ? moveDown() : error('sem')
+      if(name.trim() || val.trim()){
+        moveDown();
+      }else{
+        error('name', 'Please fill in');
+      }
+    }else if(e === 'number'){
+      if(number.trim() || val.trim()){
+        if(number.match(/\d/g)?.length === number?.length || val.match(/\d/g)?.length === val?.length){
+          if(number?.length === 10 || val?.length === 10){
+            moveDown();
+          }else{
+            error('number', 'Please enter 10 digit number');
+          }
+        }else{
+          error('number', 'Please fill correct format');
+        }
+      }else{
+        error('number', 'Please fill in');
+      }
+    }else if(e === 'email'){
+      if(email.trim() || val.trim()){
+        if(email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) || val.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
+          moveDown();
+        }else{
+          error('email', 'Please fill correct format');
+        }
+      }else{
+        error('email', 'Please fill in');
+      }
+    }else if(e === 'college'){
+      if(college.trim() || val.trim()){
+        moveDown();
+      }else{
+        error('college', 'Please fill in');
+      }
+    }else if(e === 'sem'){
+      if(sem.trim() || val.trim()){
+        if(val?.trim()){
+          alert('Click on submit button.');
+        }else if(name && sem && number && email && college){
+          console.log('Submitting and redirecting to home page.');
+          setTimeout(() => {
+            navigate('/');
+          }, 1000);
+        }else{
+          alert('please fill all input fields.')
+        }
+      }else{
+        error('college', 'Please fill in');
+      }
+    }else{
+      console.log('done');
     }
   }
 
   useEffect(() => {
-    // console.log(name);
-  }, [name]);
-
-
-  useEffect(() => {
-    document.querySelectorAll('section').forEach((s) => {
-      // console.log(s.style.bottom);
-      s.style.bottom = '0%';
-     });
-
     document.addEventListener('keypress', (e) => {
       if(e.key === 'Enter'){
-        // console.log('Enter', e.target.name === 'name');
-        e.target.value ? moveDown() : error(e.target.name)
+        console.log(e.target.value);
+      handleOK(e.target.name.toString(), e.target.value);
       }
     });
   },[]);
 
+  useEffect(() => {
+    console.log(foc);
+    var inputBoxs = document.querySelectorAll('input');
+    inputBoxs[foc].focus();
+  }, [foc]);
+
   return (
     <div className={regStyle.registration}>
-      <div className={regStyle.slider}>
+      <div className={regStyle.slider} id='reg'>
       <section id='1'>
         <div className={regStyle.que}>
             <p className={regStyle.p}>
@@ -116,12 +152,14 @@ const Registration = () => {
             </p>
             <div>
                 <input 
+                autoFocus
                 value={name}
                 name='name'
                 type='text'
                 placeholder='Type your name here...'
-                autoFocus
                 required
+                autoComplete='off'
+                onBlur={() =>  setNameError('white')}
                 onChange={(e) => {
                   if(nameError === 'red'){
                     setNameError('white');
@@ -133,7 +171,7 @@ const Registration = () => {
                   boxSizing: 'border-box'
                 }}
                 />
-                <button onClick={() => handleOK('name')}>OK<CheckIcon/></button>
+                {nameError === 'red' ? <p className={regStyle.errorMessage}><WarningRoundedIcon/>{errorText}</p> : <button onClick={() => handleOK('name')}>OK<CheckIcon/></button>}
             </div>
         </div>
       </section>
@@ -160,6 +198,8 @@ const Registration = () => {
                 type='text'
                 placeholder='6393417511'
                 required
+                autoComplete='off'
+                onBlur={() =>  setNameError('white')}
                 onChange={(e) => {
                   if(numberError === 'red'){
                     setNumberError('white');
@@ -170,7 +210,7 @@ const Registration = () => {
                   boxSizing: 'border-box'
                 }}
                 />
-                <button onClick={() => handleOK('number')}>OK<CheckIcon/></button>
+                 {numberError === 'red' ? <p className={regStyle.errorMessage}><WarningRoundedIcon/>{errorText}</p> : <button onClick={() => handleOK('number')}>OK<CheckIcon/></button>}
             </div>
         </div>
       </section>
@@ -197,6 +237,8 @@ const Registration = () => {
                 type='email'
                 placeholder='name@example.com'
                 required
+                autoComplete='off'
+                onBlur={() =>  setNameError('white')}
                 onChange={(e) => {
                   if(emailError === 'red'){
                     setEmailError('white');
@@ -208,7 +250,7 @@ const Registration = () => {
                   boxSizing: 'border-box'
                 }}
                 />
-                <button onClick={() => handleOK('email')}>OK<CheckIcon/></button>
+                 {emailError === 'red' ? <p className={regStyle.errorMessage}><WarningRoundedIcon/>{errorText}</p> : <button onClick={() => handleOK('email')}>OK<CheckIcon/></button>}
             </div>
         </div>
       </section>
@@ -226,7 +268,7 @@ const Registration = () => {
                         }}
                     />
                 </span>
-            And what's your College name?
+            And what's your College name? *
             </p>
             <div>
                 <input 
@@ -234,6 +276,9 @@ const Registration = () => {
                 name='college'
                 type='text'
                 placeholder='Type your college name here...'
+                autoComplete='off'
+                required
+                onBlur={() =>  setNameError('white')}
                 onChange={(e) => {
                   if(collegeError === 'red'){
                     setCollegeError('white');
@@ -245,7 +290,7 @@ const Registration = () => {
                   boxSizing: 'border-box'
                 }}
                 />
-                <button onClick={() => handleOK('college')}>OK<CheckIcon/></button>
+               {collegeError === 'red' ? <p className={regStyle.errorMessage}><WarningRoundedIcon/>{errorText}</p> : <button onClick={() => handleOK('college')}>OK<CheckIcon/></button>}
             </div>
         </div>
       </section>
@@ -263,7 +308,7 @@ const Registration = () => {
                         }}
                     />
                 </span>
-            And what's your current Semester?
+            And what's your current Semester? *
             </p>
             <div>
                 <input 
@@ -271,6 +316,9 @@ const Registration = () => {
                 name='sem'
                 type='text'
                 placeholder='Third'
+                autoComplete='off'
+                required
+                onBlur={() =>  setNameError('white')}
                 onChange={(e) => {
                   if(semError === 'red'){
                     setSemError('white');
@@ -282,7 +330,7 @@ const Registration = () => {
                   boxSizing: 'border-box'
                 }}
                 />
-                <button onClick={() => handleOK('sem')}>OK<CheckIcon/></button>
+                {semError === 'red' ? <p className={regStyle.errorMessage}><WarningRoundedIcon/>{errorText}</p> : <button onClick={() => handleOK('sem')}>Submit</button>}
             </div>
         </div>
       </section>
