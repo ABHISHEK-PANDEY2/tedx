@@ -32,7 +32,7 @@ import {
             let isSpeaker = element.icon === "speaker";
             return (
               <VerticalTimelineElement
-                key={element.key}
+                key={element.id}
                 date={element.date}
                 dateClassName="date"
                 iconStyle={workIconStyles}
