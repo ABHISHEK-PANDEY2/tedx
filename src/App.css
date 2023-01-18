@@ -96,4 +96,15 @@ a{
   .wrapper-container{
     padding: 0 60px;
   }
+
+  .heading{
+    padding: 60px 0 20px;
+  }
+
+}
+
+@media (max-width:450px) {
+  .wrapper-container{
+    padding: 30px;
+  }
 }

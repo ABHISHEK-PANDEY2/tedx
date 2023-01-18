@@ -27,13 +27,13 @@ const Banner = () => {
     const styles = {
         mouse:{
             position:"absolute",
-            bottom:"10px",
+            bottom:"20px",
             left:"50%",
-            transform:"translate(-50%,0)"
+            transform:"translate(-50%,-20px)"
         },
         wrapper : {
             position:"relative",
-            height: "calc(100vmin - 160px)",
+            height: "calc(100vh - 160px)",
             minHeight: "400px",
             width: "100%",
         },

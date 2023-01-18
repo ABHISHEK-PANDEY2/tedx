@@ -15,11 +15,11 @@ const Faq = () => {
 
   return (
     <div className="wrapper">
-      <div className="accordian">
       <div className="heading">
                 <p>Some</p>
                 <h1>FAQs</h1>
             </div>
+      <div className="accordian">
         {data.map((item, i) => (
           <div className="item" key={i}>
             <div className="question" onClick={() => toggle(i)}>

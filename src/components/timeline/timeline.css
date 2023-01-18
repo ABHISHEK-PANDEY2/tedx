@@ -195,6 +195,17 @@
     }
 }
 
+@media (max-width : 980px) {
+  .vertical-timeline-element-content .vertical-timeline-element-date{
+    padding: 5px 0 0 !important;
+    font-size: 1.2rem !important;
+  }
+  #description{
+    margin: 5px 0 0 !important;
+  }
+}
+
+
 @media screen and (max-width:992px) and (min-width:769px){
     .sub_title{
         font-size: 1.7rem;
@@ -229,7 +240,7 @@
       font-size: .75rem;
     }
     .vertical-timeline-element-content.bounce-in {
-      min-width: max-content;
+      /* min-width: max-content; */
     }
     .sub_title{
       font-size: 1.3rem;

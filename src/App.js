@@ -22,12 +22,12 @@ function App() {
       <Navbar />
       <Banner />
       <div className="wrapper-container">
-      <Carousel/>
+      {/* <Carousel/> */}
       <Timeline />
       <About />
       <Galary/>
       <Faq />
-      <ContactUs />
+      {/* <ContactUs /> */}
       </div>
       <Footer />
         </>}/>
