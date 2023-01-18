@@ -26,52 +26,53 @@ const ContactUs = () => {
   };
 
   return (
-    <><div className="heading">
-    <p>Contact Us</p>
-    <h1>Still any Queries?</h1>
-</div>
-    <div className="cover">
-      
-      <div className="cover2">
-        
-        <div className="cover3">
-          <div className="left child">
-            <p>
-              Write us at:
-              <br />
-              gmail@jssate.com
-              <br />
-              <br />
-            </p>
-            <p>Get connected with us on:</p>
-            <div className="icons">
-              <img className="icon" src={vector} />
-              <img className="icon" src={vector} />
-              <img className="icon" src={vector} />
+    <>
+      <div className="heading">
+        <p>Contact Us</p>
+        <h1>Still any Queries?</h1>
+      </div>
+      <div className="cover">
+        <div className="cover2">
+          <div className="cover3">
+            <div className="left child">
+              <p>
+                Write us at:
+                <br />
+                gmail@jssate.com
+                <br />
+                <br />
+              </p>
+              <p>Get connected with us on:</p>
+              <div className="icons">
+                <img className="icon" src={vector} />
+                <img className="icon" src={vector} />
+                <img className="icon" src={vector} />
+              </div>
             </div>
-          </div>
-          <div className="right child">
-            <form className="form">
-              <div className="form-group">
-                <input placeholder="Name*" type="text" required />
-              </div>
-              <div className="form-group">
-                <input placeholder="Email*" type="email" required />
-              </div>
-              <div className="form-group">
-                <input placeholder="Phone Number" type="number" />
-              </div>
-              <div className="form-group">
-                <input placeholder="Query*" type="text" required />
-              </div>{" "}
-              <button className="button form-group" type="submit">
-                Submit
-              </button>
-            </form>
+            <div className="right child">
+              <form className="form">
+                <div className="form-group">
+                  <input placeholder="Name*" type="text" required />
+                </div>
+                <div className="form-group">
+                  <input placeholder="Email*" type="email" required />
+                </div>
+                <div className="form-group">
+                  <input placeholder="Phone Number" type="number" />
+                </div>
+                <div className="form-group">
+                  <input placeholder="Query*" type="text" required />
+                </div>{" "}
+                <div className="form-group btn">
+                  <button className="button " type="submit">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </>
   );
 };
