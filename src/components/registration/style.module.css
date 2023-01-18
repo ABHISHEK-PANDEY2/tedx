@@ -1,3 +1,11 @@
+.nav{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 100vw;
+}
 .registration{
     color: white;
     font-family: lato;
@@ -8,7 +16,6 @@
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    height: 100vh;
     padding: 0 10px;
 }
 
@@ -28,7 +35,7 @@ section{
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     bottom: 0%;
 }
 

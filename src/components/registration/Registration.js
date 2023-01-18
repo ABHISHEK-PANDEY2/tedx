@@ -6,6 +6,7 @@ import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownR
 import KeyboardArrowUpRoundedIcon from '@mui/icons-material/KeyboardArrowUpRounded';
 import WarningRoundedIcon from '@mui/icons-material/WarningRounded';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../navbar';
 
 const Registration = () => {
 
@@ -132,6 +133,8 @@ const Registration = () => {
   }, [foc]);
 
   return (
+    <>
+    <div className={regStyle.nav}><Navbar/></div>
     <div className={regStyle.registration}>
       <div className={regStyle.slider} id='reg'>
       <section id='1'>
@@ -340,6 +343,7 @@ const Registration = () => {
         <span onClick={moveDown}><KeyboardArrowDownRoundedIcon/></span>
       </div>
     </div>
+    </>
   )
 }
 

@@ -21,10 +21,10 @@ import {
     
     return (
       <div className='timeline_body'>
-      <div className='container'>
-        <h1 className="sub_title">The</h1>
-        <h1 className="title">Timeline</h1>
-      </div>
+      <div className="heading">
+                <p>The</p>
+                <h1>Timeline</h1>
+            </div>
         <VerticalTimeline>
           {timelineElements.map((element) => {
             let isRegister = element.icon === "register";
@@ -32,7 +32,7 @@ import {
             let isSpeaker = element.icon === "speaker";
             return (
               <VerticalTimelineElement
-                key={element.key}
+                key={element.id}
                 date={element.date}
                 dateClassName="date"
                 iconStyle={workIconStyles}

@@ -50,6 +50,39 @@ h1,h2 {
   color:#F9363A;
 }
 
+a{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  color:#F9363A !important
+}
+
+.heading{
+  padding: 100px 0 60px 0;
+}
+
+.heading h1{
+  margin:0;
+  font-size: 4vmax;
+  font-family:'Poppins', sans-serif;
+  color:#F9363A;
+}
+
+.heading p{
+  color:#ffffff;
+  font-family: 'Poppins',sans-serif;
+  margin:0;
+  font-size:1.8vmax;
+  opacity:0.7;
+  line-height: 0
+}
+
+.wrapper-container{
+  padding: 0 170px;
+}
+
 #speakers{
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -57,4 +90,10 @@ h1,h2 {
 
 #speakers::-webkit-scrollbar {
   display: none;
+}
+
+@media (max-width : 960px) {
+  .wrapper-container{
+    padding: 0 60px;
+  }
 }

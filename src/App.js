@@ -10,6 +10,7 @@ import Footer from "./components/footer/footer";
 import Timeline from "./components/timeline/timeline";
 import PageNotFound from "./components/PageNotFound";
 import Galary from "./components/galary/Galary";
+import Carousel from "./components/carousel"
 function App() {
   return (
     <div className="App">
@@ -20,11 +21,14 @@ function App() {
         <>
       <Navbar />
       <Banner />
-      <Galary/>
+      <div className="wrapper-container">
+      <Carousel/>
       <Timeline />
       <About />
+      <Galary/>
       <Faq />
       <ContactUs />
+      </div>
       <Footer />
         </>}/>
       <Route path="reg" element={<Registration />}/>

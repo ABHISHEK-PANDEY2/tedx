@@ -26,10 +26,14 @@ const ContactUs = () => {
   };
 
   return (
+    <><div className="heading">
+    <p>Contact Us</p>
+    <h1>Still any Queries?</h1>
+</div>
     <div className="cover">
+      
       <div className="cover2">
-        <h2 className="contactUs">Contact us</h2>
-        <h1 className="still">Still any Queries?</h1>
+        
         <div className="cover3">
           <div className="left child">
             <p>
@@ -68,6 +72,7 @@ const ContactUs = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

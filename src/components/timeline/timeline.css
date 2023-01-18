@@ -1,13 +1,8 @@
-.timeline_body{
-    max-width: 1170px;
-    margin: auto;
-   }
-
    .container{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 95%;
+    /* width: 95%; */
     margin: 0 auto;
    }
    .sub_title{
@@ -238,10 +233,9 @@
     }
     .sub_title{
       font-size: 1.3rem;
-  }
+    }
 
   .title{
       font-size: 2rem;
-  }  
-    
+  }
 }
