@@ -75,4 +75,45 @@ a {
   .wrapper-container {
     padding: 0 60px;
   }
+
+  .heading{
+    padding: 60px 0 20px;
+  }
+
+}
+
+@media (max-width:600px) {
+  .x{
+    height: 30vh !important;
+  }
+
+  .banner{
+    height: 12vh !important;
+    padding: 0 2vw !important;
+  }
+
+  .banner span{
+    font-size: 5vw !important;
+  }
+
+  .dates{
+    height: 50px !important;
+    font-size: 3.7vw !important;
+  }
+
+  .register{
+    font-size: 3.7vw !important;
+  }
+
+  .triangle{
+    border-bottom: 25px solid transparent !important;
+    border-top: 25px solid transparent !important;
+    border-right: 25px solid #0e061d !important;
+  }
+}
+
+@media (max-width:450px) {
+  .wrapper-container{
+    padding: 30px;
+  }
 }

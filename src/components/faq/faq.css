@@ -57,9 +57,12 @@
 }
 
 .content {
-  font-size: 2.5vmin;
+  font-size: 1vmax;
   max-height: 0;
   overflow: hidden;
+  font-family: "Popins",sans-serif;
+  /* font-size: 2vmin; */
+  line-height: 1.5;
   transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
@@ -67,15 +70,37 @@
   font-size: 5vmin;
 }
 
-.content{
-  font-family: "Popins",sans-serif;
-  font-size: 2vmin;
-  line-height: 1.5;
-}
 
 .content.show {
   
   height: auto;
   max-height: 9999px;
   transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+@media (max-width : 960px) {
+ .accordian{
+  margin: auto;
+ }
+ .accordian{
+  width: 100%;
+ }
+ .question p{
+  width: 100%;
+ }
+ .question{
+  width: 100%;
+ }
+
+}
+
+@media (max-width : 800px) {
+  .question p{
+    font-size: 1.7vmax;
+  }
+
+  .content{
+    font-size: 1.6vmax;
+    line-height: 1.7;
+  }
 }

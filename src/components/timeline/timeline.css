@@ -1,84 +1,90 @@
-.timeline_body {
-  max-width: 1170px;
-  margin: auto;
-}
-.container {
+.container{
   display: flex;
   justify-content: center;
   flex-direction: column;
   /* width: 95%; */
   margin: 0 auto;
-}
-.sub_title {
+ }
+ .sub_title{
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 160%;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: #FFFFFF;
   opacity: 0.75;
   font-family: "Lato";
   margin: 0;
-}
-
-.title {
+ }
+ 
+ 
+ .title {
   font-style: normal;
   font-weight: 700;
   font-size: 4.5rem;
   line-height: 160%;
   display: flex;
   align-items: center;
-  color: #f9363a;
+  color: #F9363A;
   font-family: "Lato";
   margin: 0;
+  
 }
-h3.vertical-timeline-element-title {
+h3.vertical-timeline-element-title{
   font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 29px;
+font-size: 1.6rem;
+line-height: 29px;
+color: #ffffff;
+font-family: "Lato";
 }
+
 .vertical-timeline-element-content-arrow {
   display: none;
 }
-span.date.vertical-timeline-element-date {
-  color: #ffffff;
+span.date.vertical-timeline-element-date{
+  color: #ffffff
 }
 /* .vertical-timeline{
-    width: 100% !important;
-  } */
+  width: 100% !important;
+} */
 .vertical-timeline-element-content {
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25),
     0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
 }
-.vertical-timeline-element-content.bounce-in {
+.vertical-timeline-element-content.bounce-in{
   background-color: #202020;
   min-height: 86px;
-  left: 0px;
-  top: 0px;
-  border-radius: 4.813411712646484px;
-  box-shadow: 0px 3.61006px 0px #dddddd;
-  border-bottom: 3px solid white;
+left: 0px;
+top: 0px;
+border-radius: 4.813411712646484px;
+box-shadow: 0px 3.61006px 0px #DDDDDD;
+border-bottom: 3px solid white;
+
 }
 
-.date {
+.date{
   color: #ffffff !important;
   font-family: "Lato";
   font-size: 1.6rem !important;
 }
+
+
 #description {
   color: #ffffff;
   font-family: "Lato";
   font-size: 1rem;
 }
 
-.span.vertical-timeline-element-icon.bounce-in {
+
+.span.vertical-timeline-element-icon.bounce-in{
   background: #202020 !important;
 }
 
-.bounce-in > svg {
-  top: 10% !important;
+.bounce-in>svg{
+  top: 10%!important;
 }
+
 
 @media only screen and (max-width: 1700px) {
   .vertical-timeline-element-date {
@@ -90,29 +96,29 @@ span.date.vertical-timeline-element-date {
 }
 
 @media only screen and (min-width: 992px) {
-  .date {
-    top: -15px !important;
-    color: #ffffff !important;
+.date {
+        top: -15px !important;
+        color: #ffffff !important;
     margin: 20px !important;
     font-size: 1.5rem !important;
     font-family: "Lato" !important;
-  }
 }
 
-@media only screen and (min-width: 992px) {
-  .vertical-timeline--two-columns
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content,
-  .vertical-timeline--two-columns
-    .vertical-timeline-element:nth-child(even):not(
-      .vertical-timeline-element--left
-    )
-    .vertical-timeline-element-content {
+}
+
+
+
+@media only screen and (min-width: 992px){
+
+  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content {
     float: right !important;
   }
+  
 }
 
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 992px){
+
   .vertical-timeline--two-columns .vertical-timeline-element-icon {
     width: 60px !important;
     height: 60px !important;
@@ -121,31 +127,28 @@ span.date.vertical-timeline-element-date {
   }
 }
 
-@media only screen and (min-width: 992px) {
-  .vertical-timeline--two-columns
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date,
-  .vertical-timeline--two-columns
-    .vertical-timeline-element:nth-child(even):not(
-      .vertical-timeline-element--left
-    )
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date {
+
+@media only screen and (min-width: 992px){
+
+  .vertical-timeline--two-columns .vertical-timeline-element.vertical-timeline-element--right .vertical-timeline-element-content .vertical-timeline-element-date, .vertical-timeline--two-columns .vertical-timeline-element:nth-child(even):not(.vertical-timeline-element--left) .vertical-timeline-element-content .vertical-timeline-element-date {
     left: auto !important;
     right: 124% !important;
     text-align: right !important;
   }
 }
 
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 992px){
+
   .vertical-timeline.vertical-timeline--two-columns:before {
     left: 50% !important;
     margin-left: -2px !important;
   }
 }
 
-@media only screen and (min-width: 992px) {
+
+@media only screen and (min-width: 992px){
+
   .vertical-timeline--two-columns .vertical-timeline-element-content {
     margin-left: 0 !important;
     padding: 1.5em !important;
@@ -153,21 +156,25 @@ span.date.vertical-timeline-element-date {
   }
 }
 
-@media only screen and (min-width: 992px) {
-  .vertical-timeline--two-columns
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date {
+
+@media only screen and (min-width: 992px){
+
+  .vertical-timeline--two-columns .vertical-timeline-element-content .vertical-timeline-element-date {
     position: absolute !important;
     width: 100% !important;
     left: 124% !important;
   }
 }
 
-@media only screen and (min-width: 1170px) {
+
+@media only screen and (min-width: 1170px){
+
   .vertical-timeline.vertical-timeline--two-columns {
     width: 95% !important;
   }
 }
+
+
 
 /* media query for fonts */
 
@@ -177,219 +184,66 @@ h3.vertical-timeline-element-title{
   }
 } */
 
-@media screen and (max-width: 1200px) and (min-width: 993px) {
-  .sub_title {
-    font-size: 2rem;
+
+@media screen and (max-width:1200px) and (min-width:993px) {
+  .sub_title{
+      font-size: 2rem;
   }
 
-  .title {
-    font-size: 4rem;
+  .title{
+      font-size: 4rem;
   }
 }
 
-@media screen and (max-width: 992px) and (min-width: 769px) {
-  .sub_title {
-    font-size: 1.7rem;
+@media (max-width : 980px) {
+.vertical-timeline-element-content .vertical-timeline-element-date{
+  padding: 5px 0 0 !important;
+  font-size: 1.2rem !important;
+}
+#description{
+  margin: 5px 0 0 !important;
+}
+}
+
+
+@media screen and (max-width:992px) and (min-width:769px){
+  .sub_title{
+      font-size: 1.7rem;
   }
 
-  .title {
-    font-size: 3.4rem;
+  .title{
+      font-size: 3.4rem;
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 481px) {
-  h3.vertical-timeline-element-title {
-    font-size: 1.25rem;
-  }
-  .date {
-    color: #ffffff !important;
-    font-family: "Lato";
-    font-size: 1.6rem !important;
-  }
-
-  #description {
-    color: #ffffff;
-    font-family: "Lato";
-    font-size: 1rem;
-  }
-
-  .span.vertical-timeline-element-icon.bounce-in {
-    background: #202020 !important;
-  }
-  .sub_title {
-    font-size: 1.6rem;
-  }
-
-  titletitle {
-    font-size: 2.4rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  h3.vertical-timeline-element-title {
-    font-size: 1rem;
-  }
-  .date {
-    font-size: 0.75rem;
-  }
-  .vertical-timeline-element-content.bounce-in {
-    min-width: max-content;
-  }
-  .sub_title {
-    font-size: 1.3rem;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (max-width: 1700px) {
-  .vertical-timeline-element-date {
-    display: block !important;
-    float: none !important;
-    color: rgb(44, 44, 44);
-    /* margin-top: 1.5em; */
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .date {
-    top: -15px !important;
-    color: #ffffff !important;
-    margin: 20px !important;
-    font-size: 1.5rem !important;
-    font-family: "Lato" !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .vertical-timeline--two-columns
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content,
-  .vertical-timeline--two-columns
-    .vertical-timeline-element:nth-child(even):not(
-      .vertical-timeline-element--left
-    )
-    .vertical-timeline-element-content {
-    float: right !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .vertical-timeline--two-columns .vertical-timeline-element-icon {
-    width: 60px !important;
-    height: 60px !important;
-    left: 50% !important;
-    margin-left: -30px !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .vertical-timeline--two-columns
-    .vertical-timeline-element.vertical-timeline-element--right
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date,
-  .vertical-timeline--two-columns
-    .vertical-timeline-element:nth-child(even):not(
-      .vertical-timeline-element--left
-    )
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date {
-    left: auto !important;
-    right: 124% !important;
-    text-align: right !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .vertical-timeline.vertical-timeline--two-columns:before {
-    left: 50% !important;
-    margin-left: -2px !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .vertical-timeline--two-columns .vertical-timeline-element-content {
-    margin-left: 0 !important;
-    padding: 1.5em !important;
-    width: 44% !important;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .vertical-timeline--two-columns
-    .vertical-timeline-element-content
-    .vertical-timeline-element-date {
-    position: absolute !important;
-    width: 100% !important;
-    left: 124% !important;
-  }
-}
-
-@media only screen and (min-width: 1170px) {
-  .vertical-timeline.vertical-timeline--two-columns {
-    width: 95% !important;
-  }
-}
-
-/* media query for fonts */
-
-/* @media screen and (max-width: 1200px) and (min-width: 993px){
+@media screen and (max-width:768px) and (min-width:481px){
   h3.vertical-timeline-element-title{
-      font-size: 1.5rem;
-    }
-  } */
-
-@media screen and (max-width: 1200px) and (min-width: 993px) {
-  .sub_title {
-    font-size: 2rem;
+      font-size: 1.25rem;
   }
-
-  .title {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 992px) and (min-width: 769px) {
-  .sub_title {
-    font-size: 1.7rem;
-  }
-
-  .title {
-    font-size: 3.4rem;
-  }
-}
-
-@media screen and (max-width: 768px) and (min-width: 481px) {
-  h3.vertical-timeline-element-title {
+  .date{
     font-size: 1.25rem;
   }
-  .date {
-    font-size: 1.25rem;
-  }
-  .sub_title {
+  .sub_title{
     font-size: 1.6rem;
-  }
-
-  titletitle {
-    font-size: 2.4rem;
-  }
 }
-@media screen and (max-width: 480px) {
-  h3.vertical-timeline-element-title {
-    font-size: 1rem;
+
+titletitle{
+    font-size: 2.4rem;
+}
+  
+}
+@media screen and (max-width:480px){
+  h3.vertical-timeline-element-title{
+      font-size: 1rem;
   }
-  .date {
-    font-size: 0.75rem;
+  .date{
+    font-size: .75rem;
   }
-  .vertical-timeline-element-content.bounce-in {
-    min-width: max-content;
-  }
-  .sub_title {
+  .sub_title{
     font-size: 1.3rem;
   }
 
-  .title {
+.title{
     font-size: 2rem;
-  }
+}
 }
