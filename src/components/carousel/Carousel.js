@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
+import profile from "../../images/profile.jpg";
+import style from "./styles.module.css"
 
 // Import Swiper styles
 import "swiper/css/bundle";
@@ -31,8 +33,47 @@ const Carousel = () => {
         }
     }, [slides]);
 
+    const speakers = [
+      {
+          name:"Rahul Singh",
+          photo:`${profile}`,
+          designation:"CEO,Venus",
+          description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur animi reprehenderit quasi, deserunt neque ratione possimus id ullam voluptas quas quia quam adipisci labore nam sunt repellendus porro ipsam fuga!"
+      },
+      {
+          name:"Vikram Shukla",
+          photo:`${profile}`,
+          designation:"Youtuber",
+          description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur animi reprehenderit quasi, deserunt neque ratione possimus id ullam voluptas quas quia quam adipisci labore nam sunt repellendus porro ipsam fuga!"
+      },
+      {
+          name:"Narendra Patil",
+          photo:`${profile}`,
+          designation:"IPS",
+          description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur animi reprehenderit quasi, deserunt neque ratione possimus id ullam voluptas quas quia quam adipisci labore nam sunt repellendus porro ipsam fuga!"
+      },
+      {
+          name:"Mahesh Singh",
+          photo:`${profile}`,
+          designation:"Motivational Speaker",
+          description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur animi reprehenderit quasi, deserunt neque ratione possimus id ullam voluptas quas quia quam adipisci labore nam sunt repellendus porro ipsam fuga!"
+      },
+      {
+          name:"Narayan Kumar",
+          photo:`${profile}`,
+          designation:"Crickter",
+          description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur animi reprehenderit quasi, deserunt neque ratione possimus id ullam voluptas quas quia quam adipisci labore nam sunt repellendus porro ipsam fuga!"
+      },
+      {
+          name:"Yash Kumar",
+          photo:`${profile}`,
+          designation:"Researcher",
+          description:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur animi reprehenderit quasi, deserunt neque ratione possimus id ullam voluptas quas quia quam adipisci labore nam sunt repellendus porro ipsam fuga!"
+      },
+  ]
+
   return (
-    <div>
+    <div id='speakers'>
     <div className="heading">
           <p>Our</p>
           <h1>Speakers</h1>
@@ -62,10 +103,26 @@ const Carousel = () => {
       modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
       className="mySwiper"
     >
-      <SwiperSlide>
-        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-      </SwiperSlide>
-      <SwiperSlide>
+      {
+        speakers.map((item,i)=>{
+          return(
+            <SwiperSlide key={i}>
+            <div className={style.member} >
+              <div className={style.details}>
+                <p style={{fontWeight:"600"}}>{item.name}</p>
+                <p><i>{item.designation}</i></p>
+              </div>
+              {/* <img className={style.profile} src={item.profile} alt="" /> */}
+              
+                <img className={style.profile} src={item.photo} alt="" />
+              
+            </div>
+            </SwiperSlide>
+          )
+        })
+      }
+      
+      {/* <SwiperSlide>
         <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
       </SwiperSlide>
       <SwiperSlide>
@@ -85,7 +142,7 @@ const Carousel = () => {
       </SwiperSlide>
       <SwiperSlide>
         <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-      </SwiperSlide>
+      </SwiperSlide> */}
     </Swiper>
     </div>
   </div>

@@ -20,7 +20,7 @@ import {
     let workIconStyles = { background: "#202020" };
     
     return (
-      <div className='timeline_body'>
+      <div className='timeline_body' id='schedule'>
       <div className="heading">
                 <p>The</p>
                 <h1>Timeline</h1>

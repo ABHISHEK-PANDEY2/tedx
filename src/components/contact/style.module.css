@@ -1,0 +1,73 @@
+.contact {
+  padding: 20px 0 40px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  font-family: "Popins", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+}
+.form {
+  width: 100%;
+  /* padding: 0 50px; */
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+form input {
+  letter-spacing: 1px;
+  outline: none;
+  color: white;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #4a4456;
+  height: 50px;
+  display: inline-block;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+form input::placeholder {
+  margin-bottom: auto;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.681);
+  margin: 0;
+}
+
+form input:active {
+  outline: none;
+}
+
+form button {
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 15px 55px;
+  color: white;
+  margin-left: auto;
+  font-size: 1.5rem;
+  width: 200px;
+  border-radius: 3px;
+}
+
+form button:hover {
+  color: #f9363a;
+  border: 1px solid #f9363a;
+}
+
+.socials {
+  padding: 20px 0;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 960px) {
+  .contact {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 40px;
+  }
+}

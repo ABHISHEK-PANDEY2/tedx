@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="wrap">
       <div className="wrap2">
-        <div className="heading">
+        <div id="about" className="heading">
           <p>About</p>
           <h1>
             What is Ted<sup>x</sup>?

@@ -5,7 +5,7 @@ import About from "./components/about/about";
 import Faq from "./components/faq/faq";
 import Navbar from "./components/navbar";
 import Registration from "./components/registration/Registration";
-import ContactUs from "./components/contactUs/contactUs";
+import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
 import Timeline from "./components/timeline/timeline";
 import PageNotFound from "./components/PageNotFound";
@@ -16,26 +16,28 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route 
-        path="/" 
-        element={
-        <>
-      <Navbar />
-      <Banner />
-      <div className="wrapper-container">
-      <Carousel/>
-      {/* <Carousel/> */}
-      <Timeline />
-      <About />
-      <Galary/>
-      <Faq />
-      <ContactUs />
-      </div>
-      <Footer />
-        </>}/>
-      <Route path="reg" element={<Registration />}/>
-      <Route path="team" element={<Team />}/>
-      <Route path="*" element={<PageNotFound/>}/>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Banner />
+              <div className="wrapper-container">
+                <Carousel />
+                {/* <Carousel/> */}
+                <Timeline />
+                <About />
+                <Galary />
+                <Faq />
+                <Contact />
+              </div>
+              {/* <Footer /> */}
+            </>
+          }
+        />
+        <Route path="reg" element={<Registration />} />
+        <Route path="team" element={<Team />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </div>
   );
