@@ -11,7 +11,7 @@ import Timeline from "./components/timeline/timeline";
 import PageNotFound from "./components/PageNotFound";
 import Team from "./components/team/team";
 import Galary from "./components/galary/Galary";
-import Carousel from "./components/carousel"
+import Carousel from "./components/carousel/Carousel";
 function App() {
   return (
     <div className="App">
@@ -23,12 +23,13 @@ function App() {
       <Navbar />
       <Banner />
       <div className="wrapper-container">
+      <Carousel/>
       {/* <Carousel/> */}
       <Timeline />
       <About />
       <Galary/>
       <Faq />
-      {/* <ContactUs /> */}
+      <ContactUs />
       </div>
       <Footer />
         </>}/>

@@ -1,0 +1,50 @@
+.gallery {
+    background-color: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    padding-top: 2rem;
+    font-family: "Lato";
+  }
+  
+  .gallery > .photos {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+  
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .gallery {
+      padding-top: 0;
+    }
+    .gheading {
+      padding-top: 1rem;
+    }
+  
+    .swiper{
+      padding-bottom: 0;
+    }
+  }
+  
