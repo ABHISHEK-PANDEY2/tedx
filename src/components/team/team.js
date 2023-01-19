@@ -5,17 +5,25 @@ import lalit from "../../images/lalit.jpeg"
 import aayush from "../../images/aayush.jpg"
 import vivek from "../../images/vivek.jpg"
 import yogita from "../../images/yogita.jpeg"
+import anant from "../../images/anant.jpg"
+import aditi from "../../images/aditi.png"
+import abhishek from "../../images/abhishek.jpeg"
 const Team = () => {
     const team = [
         {
             name:"Anant Mishra",
             post:"Organizing Head",
-            profile:profile
+            profile:anant
         },
         {
             name:"Vivek Singh",
             post:"Designer",
             profile:vivek
+        },
+        {
+            name:"Aditi Pandey",
+            post:"Designer",
+            profile:aditi
         },
         {
             name:"Yogita Singh",
@@ -25,7 +33,7 @@ const Team = () => {
         {
             name:"Abhishek Pandey",
             post:"Developer",
-            profile:profile
+            profile:abhishek
         },
         {
             name:"Aayush Aryan",
