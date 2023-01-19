@@ -98,4 +98,9 @@
   .question p{
     font-size: 1.7vmax;
   }
+
+  .content{
+    font-size: 1.6vmax;
+    line-height: 1.7;
+  }
 }

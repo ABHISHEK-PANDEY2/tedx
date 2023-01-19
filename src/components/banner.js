@@ -1,4 +1,4 @@
-import banner from "../images/banner.jpg";
+import banner from "../images/banner.svg";
 import mouse from "../images/mouse.svg"
 import x from "../images/x.svg"
 // import useDimension from "./useDimension";
@@ -27,13 +27,13 @@ const Banner = () => {
     const styles = {
         mouse:{
             position:"absolute",
-            bottom:"20px",
+            bottom:"12px",
             left:"50%",
-            transform:"translate(-50%,-20px)"
+            transform:"translate(-50%,-12px)"
         },
         wrapper : {
             position:"relative",
-            height: "calc(100vh - 160px)",
+            height: "calc(100vh - 100px)",
             minHeight: "400px",
             width: "100%",
         },
@@ -52,9 +52,9 @@ const Banner = () => {
         },
         banner:{
             boxSizing : "border-box",
-            padding:"0px 50px",
+            padding:"0px 5vw",
             position:"relative",
-            height : "20vmin",
+            height : "20vh",
             width : "100%",
             background:`url(${banner})`,
             backgroundRepeat: "no-repeat",
@@ -76,7 +76,7 @@ const Banner = () => {
             color: "white",
             display:"flex",
             alignItems:"center",
-            fontSize:font,
+            fontSize:"2vw",
             fontWeight:"400"
         },
         register:{
@@ -87,7 +87,6 @@ const Banner = () => {
             height:"100%",
             color:"#F9363A",
             backgroundColor:"white",
-            fontSize:font,
             fontWeight : "600",
             fontFamily: "'Poppins', sans-serif",
         },
@@ -114,8 +113,8 @@ const Banner = () => {
             outlineRight:"1px solid #0e061d"
         },
         x:{
-            height:"55vmin",
-            width:"30vmax",
+            height:"50vh",
+            // width:"30vw",
             position :"absolute",
             top:"50%",
             left:"50%",
@@ -128,17 +127,17 @@ const Banner = () => {
     <img style={styles.mouse} src={mouse} alt="" />
     <div style={styles.wrapper}>
         <div style={styles.content}>
-        <div style={styles.banner}>
-            <img src={x} style={styles.x} alt="" />
-            <span style={{fontSize : "4vmax" ,color:"#ff898b", opacity:"0.7"}}>JSSATE, NOIDA</span>
-            <span style={{fontSize : "4vmax", color:"#F9363A", opacity:"0.7"}}>PRESENTS TEDX</span>
+        <div className="banner" style={styles.banner}>
+            <img className="x" src={x} style={styles.x} alt="" />
+            <span style={{fontSize : "4vw" ,color:"#ff898b", opacity:"0.7"}}>JSSATE, NOIDA</span>
+            <span style={{fontSize : "4vw", color:"#F9363A", opacity:"0.7"}}>PRESENTS TEDX</span>
         </div>
-        <div style={styles.date}>
+        <div className="dates" style={styles.date}>
             <div style={styles.register}>
-            <a href="/reg"><div style={styles.text}>Register Here</div></a>
-                <div style={styles.triangle}></div>
+            <a href="/reg"><div className="text" style={styles.text}>Register Here</div></a>
+                <div className="triangle" style={styles.triangle}></div>
             </div>
-            <div style={{margin:"auto"}}>19 March, 2023</div>
+            <div  style={{margin:"auto"}}>19 March, 2023</div>
         </div>
     </div>
     </div>
