@@ -1,14 +1,15 @@
 import "./about.css";
-import tedx from "../../images/tedx.png";
+
 const About = () => {
   return (
     <div className="wrap">
       <div className="wrap2">
-        <h2 className="about">About</h2>
-        <h1 className="whatIs">
-          {/* What is <img src={tedx} className="logo" alt="tedx logo" /> ? */}
-          What is Ted<sup>x</sup>?
-        </h1>
+        <div className="heading">
+          <p>About</p>
+          <h1>
+            What is Ted<sup>x</sup>?
+          </h1>
+        </div>
 
         <p className="contents">
           Lorem ipsum dolor sit amet consectetur. Pharetra urna quis porttitor

@@ -1,24 +1,44 @@
 import profile from "../images/profile.jpg"
 import arrow from "../images/slider-arrow.svg"
+import { useEffect, useState, useRef } from "react"
 const Carousel = () => {
+
+    // const [width,setWidth] = useState(window.innerWidth);
+    // const [isClicked, setIsClicked] = useState(false);
+    
+    // const widthResize = function(){
+    //     setWidth(window.innerWidth)
+    // }
+
+    // window.onresize = widthResize;
+
     const styles = {
         carousel:{
-            padding:"80px 170px",
+            // padding:`80px 0`,
         },
+        //${(width > 960) ? 170 : 100}px
         p:{
             color:"#ffffff",
-            fontFamily: "'Lato','Poppins',sans-serif",
+            fontFamily: "'Poppins',sans-serif",
             margin:"0",
             fontSize:"1.8rem",
             opacity:"0.7",
             lineHeight: "0"
         },
         speakers:{
+            height:"30vmax",
             width:"100%",
             overflowX:"auto",
             display:"flex",
-            gap:"40px",
             padding:"30px 0"
+        },
+        speaker:{
+            width:"calc((100% ))",
+            padding:"0 40px 0 0"
+        },
+        photo:{
+            width:"auto",
+            height:"100%"
         },
         leftArrow: {
             position:"absolute",
@@ -79,30 +99,36 @@ const Carousel = () => {
         },
     ]
 
-    const slider = document.getElementById("speakers");
-    const sliderWidth = slider.offsetWidth;
+    
     function left(){
-        slider.scrollBy(-170,0)
+        const scroll = document.querySelector(".speaker").offsetWidth
+        const slider = document.getElementById("speakers")
+        console.log(scroll);
+        slider.scrollBy(-1*(scroll),0)
     }
 
     function right(){
-        slider.scrollBy(170,0)
+        const scroll = document.querySelector(".speaker").offsetWidth
+        const slider = document.getElementById("speakers")
+        console.log(scroll);
+        slider.scrollBy(scroll,0)
     }
-
 
     return ( 
     <>
         <div style={styles.carousel}>
-            <span style={styles.p}>Our</span>
-            <h1>Speakers</h1>
+            <div className="heading">
+                <p>Our</p>
+                <h1>Speakers</h1>
+            </div>
             <div style={{position:"relative"}}>
                 <button style={styles.leftArrow} onClick={()=>left()}><img src={arrow}/></button>
                 <button style={styles.rightArrow} onClick={()=>right()}><img src={arrow}/></button>
             
                 <div style={styles.speakers} id="speakers">
                 { speakers.map((speaker,i) => {
-                    return (<div key={i}>
-                        <img src={speaker.photo} alt={speaker.name} />
+                    return (<div key={i} style={styles.speaker} className = "speaker">
+                        <img src={speaker.photo} style={styles.photo} alt={speaker.name} />
                     </div>)
                 }) }
                 </div>

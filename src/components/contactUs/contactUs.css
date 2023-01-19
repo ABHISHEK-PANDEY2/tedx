@@ -1,32 +1,22 @@
-body {
-  margin: 0;
-  padding: 0;
-}
 .cover {
-  /* display: flex;
-  color: #ffffff;
-  
-  width: 100%;
-  padding: 100px;
-  justify-content: center;
-  align-items: center;
-  height: 900px;
-  position: relative;
-  margin-top: -30px; */
-  /* border: solid 2px #ffffff; */
   color: #ffffff;
   display: flex;
-  margin-top: 280px;
+
+  /* margin-top: 280px; */
   width: 100%;
   justify-content: center;
   align-items: center;
+  padding-bottom: 80vmin;
+}
+.heading {
+  padding-bottom: 10px !important;
 }
 
 .cover2 {
-  margin-top: -380px;
+  /* margin-top: -380px; */
   min-width: 250px;
-  width: 1200px;
-  padding: 100px;
+  width: 1530px;
+
   /* border: solid 2px #ffffff; */
   /* width: 269px;
   padding: 100px;
@@ -35,6 +25,7 @@ body {
   left: 50%;
   margin: -50px 0 0 -700px; */
   display: flex;
+  justify-content: flex-end;
   flex-flow: column wrap;
   flex-direction: column;
 }
@@ -79,19 +70,25 @@ body {
 
 .cover3 {
   display: flex;
+  justify-content: flex-end;
 }
 .left {
   font-size: 2.6vmin;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 .right {
-  margin: auto;
+  margin-right: auto;
 }
 
 .icon {
   width: 3.3vmin;
   height: 3.3vmin;
   margin-right: 2vmin;
+}
+.btn {
+  width: 60vmin;
+
+  display: inline-block;
 }
 
 input {
@@ -104,7 +101,7 @@ input {
   font-family: "Lato";
   font-style: normal;
   font-weight: 400;
-  font-size: 3.4vmin;
+  font-size: 2.8vmin;
   line-height: 160%;
   /* identical to box height, or 45px */
 
@@ -113,12 +110,14 @@ input {
   letter-spacing: 0.02em;
 
   color: #ffffff;
-
+  width: 60vmin;
   opacity: 0.75;
 }
 
 .form-group {
-  padding: 20px;
+  padding: 22px;
+  padding-right: 0px;
+  text-align: end;
 }
 .child {
   width: 50%;
@@ -135,15 +134,17 @@ input {
 }
 
 .button {
-  position: static;
+  /* position: static; */
   transition-duration: 0.4s;
   background-color: #0e061d;
   color: #ffffff;
   border: 2px solid #ffffff;
   padding: 1.2vmin 4vmin;
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 2.2vmin;
-  margin-left: auto;
+
+  position: static;
+  top: 0;
 }
 
 .button:hover {

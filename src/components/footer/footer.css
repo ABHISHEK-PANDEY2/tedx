@@ -1,10 +1,20 @@
 .footer {
   position: relative;
   height: 320px;
-  margin-top: 1100px;
+  /* margin-top: 1100px; */
   left: 0;
   bottom: 0;
   width: auto;
 
   background: #ffffff;
+}
+
+.logo1 {
+  padding: 17px;
+}
+
+.logo2 {
+  position: absolute;
+  width: auto;
+  height: 48.51px;
 }

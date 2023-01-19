@@ -32,11 +32,12 @@ const Galary = () => {
     }, [slides]);
 
   return (
+    <div>
+    <div className="heading">
+          <p>The</p>
+          <h1>Gallery</h1>
+      </div>
     <div className='gallery'>
-     <div className='gheading'>
-        <p>Our</p>
-        <h2>Speakers</h2>
-     </div>
     <div className='photos'>
     <Swiper
       effect={"coverflow"}
@@ -44,16 +45,18 @@ const Galary = () => {
       centeredSlides={true}
       Navigation={true}
       slidesPerView={slides}
+      spaceBetween={10}
+      loop={true}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
       }}
       coverflowEffect={{
-        rotate: 50,
+        rotate: -40,
         stretch: 0,
         depth: 100,
         modifier: 1,
-        slideShadows: true,
+        slideShadows: false,
       }}
       pagination={true}
       modules={[EffectCoverflow, Pagination, Autoplay, Navigation]}
@@ -85,6 +88,7 @@ const Galary = () => {
       </SwiperSlide>
     </Swiper>
     </div>
+  </div>
   </div>
   )
 }
