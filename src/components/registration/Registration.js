@@ -21,6 +21,7 @@ const Registration = () => {
   const [emailError, setEmailError] = useState("white");
   const [collegeError, setCollegeError] = useState("white");
   const [foc, setFoc] = useState(0);
+  const [fullWidth, setFullWidth] = useState(false);
   const [errorText, setErrorText] = useState(null);
 
   const moveDown = () => {
@@ -59,16 +60,16 @@ const Registration = () => {
 
   const handleOK = (e, val) => {
     if (e === "name") {
-      if (name.trim() || val.trim()) {
+      if (name?.trim() || val?.trim()) {
         moveDown();
       } else {
         error("name", "Please fill in");
       }
     } else if (e === "number") {
-      if (number.trim() || val.trim()) {
+      if (number?.trim() || val?.trim()) {
         if (
-          number.match(/\d/g)?.length === number?.length ||
-          val.match(/\d/g)?.length === val?.length
+          number?.match(/\d/g)?.length === number?.length ||
+          val?.match(/\d/g)?.length === val?.length
         ) {
           if (number?.length === 10 || val?.length === 10) {
             moveDown();
@@ -82,7 +83,7 @@ const Registration = () => {
         error("number", "Please fill in");
       }
     } else if (e === "email") {
-      if (email.trim() || val.trim()) {
+      if (email?.trim() || val?.trim()) {
         if (
           email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/) ||
           val.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)
@@ -95,13 +96,13 @@ const Registration = () => {
         error("email", "Please fill in");
       }
     } else if (e === "college") {
-      if (college.trim() || val.trim()) {
+      if (college?.trim() || val?.trim()) {
         moveDown();
       } else {
         error("college", "Please fill in");
       }
     } else if (e === "sem") {
-      if (sem.trim() || val.trim()) {
+      if (sem?.trim() || val?.trim()) {
         if (val?.trim()) {
           alert("Click on submit button.");
         } else if (name && sem && number && email && college) {
@@ -127,12 +128,24 @@ const Registration = () => {
         handleOK(e.target.name.toString(), e.target.value);
       }
     });
+    window.addEventListener('resize', (e) => {
+      if(e.currentTarget.innerWidth < 480){                
+       setFullWidth(false);
+      }else if(e.currentTarget.innerWidth >= 480){               
+        setFullWidth(true);
+      }
+         });
   }, []);
 
   useEffect(() => {
     console.log(foc);
     var inputBoxs = document.querySelectorAll("input");
-    inputBoxs[foc].focus();
+    var spanBoxs = document.querySelectorAll("section");
+    if(fullWidth){
+      inputBoxs[foc].focus();
+    }else{
+      spanBoxs[foc].scrollIntoView();
+    }
   }, [foc]);
 
   return (
